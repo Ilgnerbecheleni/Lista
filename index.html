@@ -103,6 +103,11 @@ body{
     border-radius: 5px;
 }
 
+.traco{
+text-decoration: line-through;
+background :white;
+}
+
 </style>
    </head>
    <body>
@@ -118,12 +123,11 @@ body{
 
 
 <script>
-     task = document.querySelectorAll(".tasks);
+     
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
         alert("Please Enter a Task")
     }
-
     else{
         document.querySelector('#tasks').innerHTML += `
             <div class="task">
@@ -135,8 +139,20 @@ document.querySelector('#push').onclick = function(){
                 </button>
             </div>
         `;
-     
+ task = document.querySelectorAll(".task");    
 console.log(task);  
+
+task.forEach((item)=>{
+
+item.addEventListener("click",()=>{
+item.classList.toggle("traco");
+
+console.log("OK");
+});
+
+
+
+});
 
         var current_tasks = document.querySelectorAll(".delete");
         for(var i=0; i<current_tasks.length; i++){
