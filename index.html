@@ -118,7 +118,7 @@ body{
 
 
 <script>
-
+     task = document.querySelectorAll(".tasks);
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
         alert("Please Enter a Task")
@@ -135,6 +135,8 @@ document.querySelector('#push').onclick = function(){
                 </button>
             </div>
         `;
+     
+console.log(task);  
 
         var current_tasks = document.querySelectorAll(".delete");
         for(var i=0; i<current_tasks.length; i++){
@@ -144,6 +146,9 @@ document.querySelector('#push').onclick = function(){
         }
     }
 }
+   
+                                  
+   
 </script>
    </body>
 </html>
